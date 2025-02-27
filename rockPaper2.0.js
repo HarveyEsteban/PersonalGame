@@ -88,8 +88,8 @@ function animationStart(pChoice, cChoice) {
     function handleAnimation() { // Define function inside
         animationCOunt++;
         if (animationCOunt >= 3) {
-            imgPlayer.src = `./${pChoice}.png`;
-            imgComputer.src = `./${cChoice}.png`;
+            imgPlayer.src = `images/${pChoice}.png`;
+            imgComputer.src = `images/${cChoice}.png`;
             winOrLose(pChoice, cChoice);
 
             animation.removeEventListener("animationiteration", handleAnimation); // ✅ Properly remove it
