@@ -35,44 +35,50 @@ body
     font-size: 80px;
 }
 
-.footer
-{
+.footer {
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 60px;
-    margin: auto 0 0 0;
-    padding: 0 15px 20px 15px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 10px 0;
+    text-align: center;
 }
 
-.footer h1:not(:first-child)::before
-{
-    content: "|";
-    margin: 0 40px 0 0 ;
-    color: black;
-    font-weight: bold;
+.footer h1 {
+    font-size: 24px; /* Adjusted for better scaling */
+    white-space: nowrap; /* Prevents breaking, but respects flex-wrap */
 }
+
+
 .playAgainBtn {
     display: none;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     width: 100%;
     height: auto;
     padding: 20px;
-    margin-top: auto;
-    background: linear-gradient(90deg, #FF416C, #FF4B2B); /* Red to Orange */
-    color: white;
+    background-color: #1F1F23;
+    color: #F4F4F6;
     border: none;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-top: 30px; /* Adds extra space above */
 }
 
+
 .playAgainBtn:hover {
-    background: linear-gradient(90deg, #FF4B2B, #FF416C); /* Reverse gradient on hover */
+    background-color: #18181B; /* Slightly darker black */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
+
 
 .btnSelection
 {
@@ -204,3 +210,107 @@ body
     100% {transform: rotate(-15deg);}
 }
 
+/*Banner for Winner*/
+
+.winnerPanel {
+    display: none;
+    min-width: 200px;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    width: auto;
+    font-size: 1.8rem;
+    height: 120px;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adds spacing below */
+}
+
+/*Media Querie mobile SHit*/
+/* Responsive Fixes */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .btnSelection {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btnSelection img {
+        width: 120px;
+        height: 120px;
+        padding: 15px;
+    }
+
+    .mainDisplayAnimation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .playerChoice img,
+    .computerChoice img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .textPlayer h1,
+    .textComputer h1 {
+        font-size: 30px;
+    }
+
+    .winnerPanel {
+        font-size: 1.3rem;
+        height: 80px;
+    }
+
+    .playAgainBtn {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .winnerPanel {
+        margin-bottom: 15px; /* Smaller spacing */
+    }
+
+    .playAgainBtn {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+}
+
+/* iPhone SE and very small screens */
+@media (max-width: 375px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .btnSelection img {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .winnerPanel {
+        font-size: 1rem;
+        height: 60px;
+    }
+
+    .playAgainBtn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
