@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotating Animation</title>
-    <style>
-        .box {
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 100px;
-            left: 150px;
-
-            /* Apply animation */
-            animation: rotateUpDown .8s infinite alternate;
-        }
-
-        @keyframes rotateUpDown {
-            0% { transform: rotate(-15deg); } /* Tilt up */
-            100% { transform: rotate(15deg); } /* Tilt down */
-        }
-    </style>
+    <title>Advance Rock Paper Scissor GAME</title>
+    <link rel="stylesheet" href="./rockPaper2.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="box"></div>
+    <div class="container">
+
+        <h1 class="title">Rock Paper Scissor</h1>
+  
+        <div class="btnSelection">
+           <div class="rock" id="rock">
+                <img src="./Rock.png" alt="rock" style>
+            </div>
+            <div class="paper" id="paper">
+                <img src="/Paper.png" alt="paper">
+            </div>
+            <div class="scissor" id="scissor">
+                <img src="./scissor.png" alt="scissor">
+            </div>
+        </div>
+
+        <!-- this is where the main animation of game will appear -->
+        <div class="mainDisplayAnimation">
+
+            <div class="playerSide">
+                <div class="textPlayer">
+                    <h1>Player</h1>
+                </div>
+                <div class="playerChoice">
+                    <img src="./Rock.png" id="playerChoice" alt="playerChoice">
+                </div>
+            </div>
+
+            <div class="middle">V/S</div>
+
+            <div class="ComputerSide">
+                <div class="textComputer">
+                    <h1>Computer</h1>
+                </div>
+                <div class="computerChoice">
+                    <img src="./rock.png" id="computerChoice" alt="computerChoice">
+       
+                </div>
+            </div>
+
+        </div>
+
+        <div class="winnerPanel">Player Won, Good job Bitch!!!</div>
+
+
+            <button class="playAgainBtn">
+                <i class="fa-solid fa-rotate"> Play Again</i>
+            </button>
+
+
+
+        <!-- This is the Footer of the container which will contain the score of player, computer and draw counts -->
+        <div class="footer">
+            <h1 class="playerScore">Player: 0 </h1>
+            <h1 class="computerScore">Computer: 0 </h1>
+            <h1 class="drawScore">Draw : 0 </h1>
+        </div>
+    </div>
+
+    <script src="./rockPaper2.0.js"></script>
 </body>
 </html>
