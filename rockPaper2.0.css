@@ -1,25 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     color: #F4F4F6;
 }
-body
-{
-    background-color:  #2C2C34  ;
+
+body {
+    background-color: #2C2C34;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
-.container
-{
+.container {
     height: 1000px;
-    background-color:#4F46E5;
+    background-color: #4F46E5;
     padding: 40px;
     display: flex;
     align-items: center;
@@ -28,14 +26,13 @@ body
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-.title
-{
+
+.title {
     margin-top: 20px;
     margin-bottom: auto;
     font-size: 80px;
 }
 
-.footer {
 .footer {
     margin-top: auto;
     display: flex;
@@ -43,39 +40,24 @@ body
     justify-content: center;
     width: 100%;
     gap: 20px;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    padding: 10px 0;
-    text-align: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
     padding: 10px 0;
     text-align: center;
 }
 
 .footer h1 {
-    font-size: 24px; /* Adjusted for better scaling */
-    white-space: nowrap; /* Prevents breaking, but respects flex-wrap */
+    font-size: 24px;
+    white-space: nowrap;
 }
-
-
-.footer h1 {
-    font-size: 24px; /* Adjusted for better scaling */
-    white-space: nowrap; /* Prevents breaking, but respects flex-wrap */
-}
-
 
 .playAgainBtn {
     display: none;
-    align-items: center;
-    justify-content: center;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     width: 100%;
     height: auto;
     padding: 20px;
-    background-color: #1F1F23;
-    color: #F4F4F6;
     background-color: #1F1F23;
     color: #F4F4F6;
     border: none;
@@ -85,93 +67,61 @@ body
     transition: 0.3s;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    margin-top: 30px; /* Adds extra space above */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    margin-top: 30px; /* Adds extra space above */
+    margin-top: 30px;
 }
-
-
 
 .playAgainBtn:hover {
-    background-color: #18181B; /* Slightly darker black */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    background-color: #18181B; /* Slightly darker black */
+    background-color: #18181B;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-
-
-.btnSelection
-{
-   display: flex;
-   gap: 10px;
+.btnSelection {
+    display: flex;
+    gap: 10px;
 }
 
-.paper, .rock, .scissor
-{
+.paper, .rock, .scissor {
     background-color: #3d36be;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 30px;
-    
 }
 
-.btnSelection img
-{
-    
+.btnSelection img {
     padding: 40px;
     width: 250px;
     height: 250px;
-   transition: transform 0.3s ease-in-out;
-   cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.btnSelection div:hover
-{
+.btnSelection div:hover {
     background-color: #3d36be;
     box-shadow: 0 5px 11px rgba(0, 0, 0, 0.3);
 }
 
-.btnSelection img:hover
-{
+.btnSelection img:hover {
     transform: scale(1.1);
 }
 
-/* CSs for Animation when Player Selected */
-
-.mainDisplayAnimation
-{
+/* Animation when player selects */
+.mainDisplayAnimation {
     display: none;
     align-items: center;
     justify-content: center;
     gap: 20px;
     margin-bottom: 40px;
-
 }
 
-.playerSide
-{
+.playerSide, .ComputerSide {
     padding: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    
 }
 
-.ComputerSide
-{
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
-    
-}
-.middle
-{
+.middle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,60 +130,50 @@ body
     font-weight: bold;
 }
 
-
-.textPlayer, .textComputer
-{
+.textPlayer, .textComputer {
     margin-bottom: 50px;
-
 }
 
-.textPlayer h1
-{
+.textPlayer h1 {
     font-style: italic;
-    font-size:50px;
+    font-size: 50px;
     color: rgb(11, 240, 11);
-
-    
 }
 
-.textComputer h1{
+.textComputer h1 {
     font-style: italic;
     font-size: 50px;
     color: red;
 }
 
-
-.playerChoice img, .computerChoice img{
+.playerChoice img, .computerChoice img {
     width: 250px;
     height: 250px;
 }
 
-.playerChoice 
-{
-    animation: rotate 0.5s ease-in-out	5 alternate;
+.playerChoice {
+    animation: rotate 0.5s ease-in-out 5 alternate;
 }
 
-.computerChoice
-{
-    animation: rotateC 0.5s ease-in-out	5 alternate;
+.computerChoice {
+    animation: rotateC 0.5s ease-in-out 5 alternate;
 }
 
-.computerChoice img{
+.computerChoice img {
     transform: scaleX(-1);
 }
 
-@keyframes rotate{
-    0% {transform: rotate(-15deg);}
-    100% {transform: rotate(15deg);}
+@keyframes rotate {
+    0% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }
 }
 
-@keyframes rotateC{
-    0% {transform: rotate(15deg);}
-    100% {transform: rotate(-15deg);}
+@keyframes rotateC {
+    0% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
 }
 
-/*Banner for Winner*/
-
+/* Winner Panel */
 .winnerPanel {
     display: none;
     min-width: 200px;
@@ -248,12 +188,10 @@ body
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Adds spacing below */
+    margin-bottom: 20px;
 }
 
-/*Media Querie mobile SHit*/
-/* Responsive Fixes */
-
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -294,23 +232,13 @@ body
     .winnerPanel {
         font-size: 1.3rem;
         height: 80px;
+        margin-bottom: 15px;
     }
 
     .playAgainBtn {
-        font-size: 1.3rem;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .winnerPanel {
-        margin-bottom: 15px; /* Smaller spacing */
-    }
-
-    .playAgainBtn {
-        margin-top: 20px;
         font-size: 1.5rem;
         padding: 15px;
+        margin-top: 20px;
     }
 }
 
