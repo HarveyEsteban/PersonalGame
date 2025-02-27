@@ -36,11 +36,16 @@ body
 }
 
 .footer {
+.footer {
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 10px 0;
+    text-align: center;
     gap: 20px;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     padding: 10px 0;
@@ -53,14 +58,24 @@ body
 }
 
 
+.footer h1 {
+    font-size: 24px; /* Adjusted for better scaling */
+    white-space: nowrap; /* Prevents breaking, but respects flex-wrap */
+}
+
+
 .playAgainBtn {
     display: none;
+    align-items: center;
+    justify-content: center;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     width: 100%;
     height: auto;
     padding: 20px;
+    background-color: #1F1F23;
+    color: #F4F4F6;
     background-color: #1F1F23;
     color: #F4F4F6;
     border: none;
@@ -71,13 +86,20 @@ body
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-top: 30px; /* Adds extra space above */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-top: 30px; /* Adds extra space above */
 }
+
 
 
 .playAgainBtn:hover {
     background-color: #18181B; /* Slightly darker black */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background-color: #18181B; /* Slightly darker black */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
+
 
 
 .btnSelection
