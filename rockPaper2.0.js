@@ -23,9 +23,7 @@ let animationCOunt = 0;
 
 // Variable for Player and COmputer Choice
 let playerChoice = "";
-let computerChoiceRandom = computerChoice();
 
-console.log(computerChoiceRandom);
 
 //Function to get Computer Choice Randomize
 
@@ -114,6 +112,9 @@ btnPlayAgain.addEventListener('click', ()=>{
 
 //get player Choice
 btn.addEventListener('click', (e)=>{
+
+let computerChoiceRandom = computerChoice();
+
 
 let pick = e.target.closest("div");
 
