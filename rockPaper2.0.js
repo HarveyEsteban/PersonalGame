@@ -87,7 +87,7 @@ function animationStart(pChoice, cChoice) {
 
     function handleAnimation() { // Define function inside
         animationCOunt++;
-        if (animationCOunt >= 3) {
+        if (animationCOunt >= 4) {
             imgPlayer.src = `images/${pChoice}.png`;
             imgComputer.src = `images/${cChoice}.png`;
             winOrLose(pChoice, cChoice);
@@ -105,6 +105,8 @@ btnPlayAgain.addEventListener('click', ()=>{
     winnerPannel.style.display = "none";
     btnPlayAgain.style.display = "none";
     btn.style.display = "flex";
+    imgPlayer.src = "images/rock.png";
+    imgComputer.src = "images/rock.png";
 
 });
 
